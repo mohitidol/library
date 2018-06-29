@@ -18,14 +18,18 @@
             </tr>
         </thead>
         <tbody>
-        <?php foreach ($books as $book) : ?>
+        <?php if( !empty($books) ) { foreach ($books as $book) { ?>
             <tr>
                 <td><?php echo $this->escapeHtml($book->id);?></td>
                 <td><?php echo $this->escapeHtml($book->name);?></td>
                 <td><?php echo $this->escapeHtml($book->description);?></td>
                 <td><?php echo $this->escapeHtml($book->status);?></td>
             </tr>
-        <?php endforeach; ?>
+        <?php } }else { ?>
+            <tr>
+                <td colspan="4">No Records Found</td>
+            </tr>
+        <?php } ?>
         </tbody>
     </table>
 </div>
