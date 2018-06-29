@@ -23,25 +23,26 @@
  echo "<a href='/book/public/book' class='float-right margin-topn30'>Back</a>";
  ?>
  
- <div class="container margin-leftn20">
- <table class="table" width="100%">
-    <thead>
-      <tr>
-        <th width="10%">Book ID</th>
-        <th width="20%">Name</th>
-        <th width="70%">Description</th>
-        <th width="10%">Status</th>
-      </tr>
-    </thead>
-    <tbody>
-        <?php foreach ($books as $book) : ?>
+<div class="container margin-leftn20">
+    <div class="align-center"><h3>Book Library</h3></div>
+    <table class="table" width="100%">
+        <thead>
             <tr>
-                <td><?php echo $this->escapeHtml($book->id);?></td>
-                <td><?php echo $this->escapeHtml($book->name);?></td>
-                <td><?php echo $this->escapeHtml($book->description);?></td>
-                <td><?php echo $this->escapeHtml($book->status);?></td>
+            <th width="10%">Book ID</th>
+            <th width="20%">Name</th>
+            <th width="70%">Description</th>
+            <th width="10%">Status</th>
             </tr>
-        <?php endforeach; ?>
-    </tbody>
-  </table>
-  </div>
+        </thead>
+        <tbody>
+            <?php if( !empty($books) ) { foreach ($books as $book) { ?>
+                <tr>
+                    <td><?php echo $this->escapeHtml($book->id);?></td>
+                    <td><?php echo $this->escapeHtml($book->name);?></td>
+                    <td><?php echo $this->escapeHtml($book->description);?></td>
+                    <td><?php echo $this->escapeHtml($book->status);?></td>
+                </tr>
+            <?php } } ?>
+        </tbody>
+    </table>
+</div>

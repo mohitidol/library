@@ -52,7 +52,10 @@ div.container a.brand {
   margin-top: -30px;
 }
 
-
 .margin-top10{
   margin-top: 10px;
+}
+
+.align-center{
+  text-align: center;
 }
