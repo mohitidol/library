@@ -39,3 +39,20 @@ div.container a.brand {
 .float-right {
   float:right;
 }
+
+.margin-leftn15{
+  margin-left: -15px;
+}
+
+.margin-leftn20{
+  margin-left: -20px;
+}
+
+.margin-topn30{
+  margin-top: -30px;
+}
+
+
+.margin-top10{
+  margin-top: 10px;
+}
