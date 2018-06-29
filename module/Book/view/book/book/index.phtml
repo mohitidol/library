@@ -1,0 +1,30 @@
+<div>
+    <div style="margin-top:10px;">
+        <input class="btn btn-primary issue" type="button" value="Issue">
+        <input class="btn btn-primary return" type="button" value="Return">
+        <input class="btn btn-primary availability" type="button" value="Check Availability">
+    </div>
+</div>
+<br>
+<div class="container" style="margin-left: -15px;">
+<table class="table" width="100%">
+    <thead>
+        <tr>
+            <th width="10%">Book ID</th>
+            <th width="20%">Name</th>
+            <th width="60%">Description</th>
+            <th width="10%">Status</th>
+        </tr>
+    </thead>
+    <tbody>
+    <?php foreach ($books as $book) : ?>
+        <tr>
+            <td><?php echo $this->escapeHtml($book->id);?></td>
+            <td><?php echo $this->escapeHtml($book->name);?></td>
+            <td><?php echo $this->escapeHtml($book->description);?></td>
+            <td><?php echo $this->escapeHtml($book->status);?></td>
+        </tr>
+    <?php endforeach; ?>
+    </tbody>
+  </table>
+</div>
