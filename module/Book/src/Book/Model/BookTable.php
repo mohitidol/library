@@ -31,8 +31,7 @@
 
      public function issueBook( Book $objBook) {
         $arrData = array(
-            'status'=> 'Issued',
-            'name'=>$objBook->name,
+            'status'=> 'Issued'
         );
 
         $strName = trim( $objBook->name );
@@ -50,8 +49,7 @@
 
     public function returnBook(Book $objBook) {
         $arrData = array(
-            'status'=> 'Available',
-            'name'=>$objBook->name,
+            'status'=> 'Available'
         );
 
         $strName = trim($objBook->name);
