@@ -22,7 +22,7 @@
         $strName   = strip_tags(trim($strName));
         $rowset    = $this->tableGateway->select(array('name' => $strName));
         $row       = $rowset->current();
-        $this->strStatus = $row->strStatus;
+        $this->strStatus = $row->status;
         if (!$row) {
             return false;
         }
