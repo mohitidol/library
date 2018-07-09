@@ -1,12 +1,12 @@
 $(document).ready(function(){
 	$(".issue").click(function() {
-		window.location.href = "http://book/book/public/book/issuebook";  
+		window.location.href = "/book/public/book/issuebook";  
 	});
 	$(".return").click(function() {
-		window.location.href = "http://book/book/public/book/returnbook";       
+		window.location.href = "/book/public/book/returnbook";       
 	});
 	$(".availability").click(function() {
-		window.location.href = "http://book/book/public/book/checkavailability";       
+		window.location.href = "/book/public/book/checkavailability";       
 	});
 });
 
