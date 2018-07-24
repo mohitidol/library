@@ -20,7 +20,7 @@
 
      public function getBook($strName) {
         $strName   = strip_tags(trim($strName));
-        $rowset    = $this->tableGateway->select(array('name' => $strName));
+         $rowset    = $this->tableGateway->select(array('name' => $strName));
         $row       = $rowset->current();
         $this->strStatus = $row->status;
         if (!$row) {
@@ -33,7 +33,6 @@
         $arrData = array(
             'status'=> 'Issued'
         );
-
         $strName = trim( $objBook->name );
         if ($this->getBook($strName)) {
             if( 'Issued' == $this->strStatus ) 

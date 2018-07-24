@@ -60,3 +60,16 @@ div.container a.brand {
 .align-center{
   text-align: center;
 }
+
+.ajax-loader{
+  height: 200px;
+  position: absolute;
+  z-index: -1;
+  top: 300px;
+  left: 500px; 
+  display:none;
+}
+
+.margin2{
+  margin:2px;
+}

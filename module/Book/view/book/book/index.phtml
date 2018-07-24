@@ -1,12 +1,21 @@
 <div>
-    <div class="margin-top10">
-        <input class="btn btn-primary issue" type="button" value="Issue">
-        <input class="btn btn-primary return" type="button" value="Return">
-        <input class="btn btn-primary availability" type="button" value="Check Availability">
-    </div>
+    <div class="alert-success alert" id="success"></div>
+    <div class="alert-warning alert" id="error"></div>
+    <?php
+        echo $this->form()->openTag($form);
+        echo '<div class="form-group col-sm-4">';
+        echo $this->formRow($form->get('Name'));
+        echo '</div>';
+        echo $this->formRow($form->get('issue'));
+        echo $this->formRow($form->get('return'));
+        echo $this->formRow($form->get('availability'));
+        echo $this->form()->closeTag();
+    ?>
 </div>
-<br>
-<div class="container margin-leftn15">
+<div class="ajax-loader" id="loading-image">
+    <img src='/book/public/img/loading.gif' width='250'/>
+</div>
+<div class="container margin-leftn15" id="bookList">
     <div class="align-center"><h3>Book Library</h3></div>
     <table class="table" width="100%">
         <thead>
