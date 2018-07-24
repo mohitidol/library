@@ -35,36 +35,6 @@ return array(
                             )
                         )
                     ),
-                    'returnbook' => array(
-                        'type' => 'literal',
-                        'options' => array(
-                            'route' => '/returnbook',
-                            'defaults' => array(
-                                'controller' => 'Book\Controller\Book',
-                                'action' => 'returnbook',
-                            )
-                        )
-                    ),
-                    'checkavailability' => array(
-                        'type' => 'literal',
-                        'options' => array(
-                            'route' => '/checkavailability',
-                            'defaults' => array(
-                                'controller' => 'Book\Controller\Book',
-                                'action' => 'checkavailability',
-                            )
-                        )
-                    ),
-                    'listbook' => array(
-                        'type' => 'literal',
-                        'options' => array(
-                            'route' => '/listbook',
-                            'defaults' => array(
-                                'controller' => 'Book\Controller\Book',
-                                'action' => 'listbook',
-                            )
-                        )
-                    ),
                 ),        
             ),
         ),

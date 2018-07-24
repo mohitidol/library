@@ -5,7 +5,7 @@ use Zend\InputFilter\InputFilter;
 use Zend\InputFilter\InputFilterAwareInterface;
 use Zend\InputFilter\InputFilterInterface;
 
- class Book
+ class Book implements InputFilterAwareInterface
  {
      public $name;
      public $description;
@@ -28,8 +28,8 @@ use Zend\InputFilter\InputFilterInterface;
              $inputFilter = new InputFilter();
 
              $inputFilter->add(array(
-                 'name'     => 'book_name',
-                 'required' => false,
+                 'name'     => 'Name',
+                 'required' => true,
                  'filters'  => array(
                     array('name' => 'StripTags'),
                     array('name' => 'StringTrim'),
